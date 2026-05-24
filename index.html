@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>RAISE 2026 | Robotics & AI in Systems Engineering | Agentic Robotics & VLA Models for Smart Agriculture</title>
+    <title>RAISE 2026 | Robotics & AI in Systems Engineering</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -21,12 +21,10 @@
             scroll-behavior: smooth;
         }
 
-        /* STICKY NAVIGATION BUTTONS BAR */
         .nav-buttons-bar {
             position: sticky;
             top: 0;
-            background: rgba(10, 48, 41, 0.98);
-            backdrop-filter: blur(12px);
+            background: #0a3029;
             z-index: 100;
             padding: 0.9rem 1rem;
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
@@ -54,7 +52,6 @@
             cursor: pointer;
             transition: all 0.2s ease;
             font-family: 'Inter', sans-serif;
-            letter-spacing: 0.3px;
         }
 
         .nav-btn:hover {
@@ -64,53 +61,49 @@
             transform: translateY(-2px);
         }
 
-        /* BOUTONS RAISE 2025 ET 2026 - STYLES SPÉCIFIQUES TRÈS VISIBLES */
-        .raise-2025-btn {
-            background: #2a7f6e;
-            border: 2px solid #ffd700;
-            color: white;
-            font-weight: 800;
-            font-size: 0.85rem;
-            padding: 0.5rem 1.1rem;
-            border-radius: 40px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.3px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .raise-2025-btn:hover {
+        /* Boutons RAISE 2025 et 2026 */
+        .btn-raise-2025 {
             background: #1e6b5a;
-            transform: translateY(-2px);
-            border-color: #fff;
-        }
-
-        .raise-2026-btn {
-            background: #f5a623;
-            border: 2px solid #ffd700;
-            color: #1d3e35;
-            font-weight: 800;
+            border: none;
+            color: white;
+            font-weight: 700;
             font-size: 0.85rem;
             padding: 0.5rem 1.1rem;
             border-radius: 40px;
             cursor: pointer;
             transition: all 0.2s ease;
             font-family: 'Inter', sans-serif;
-            letter-spacing: 0.3px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .raise-2026-btn:hover {
-            background: #ffb347;
+        .btn-raise-2025:hover {
+            background: #0f4d40;
             transform: translateY(-2px);
-            border-color: #fff;
+        }
+
+        .btn-raise-2026 {
+            background: #f5a623;
+            border: none;
+            color: #1d3e35;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-raise-2026:hover {
+            background: #e09510;
+            transform: translateY(-2px);
         }
 
         .container {
@@ -139,19 +132,6 @@
             padding: 3rem 0;
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-split::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255,255,240,0.1) 0%, rgba(255,255,240,0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
         }
 
         .hero-grid {
@@ -160,8 +140,6 @@
             gap: 2rem;
             align-items: center;
             justify-content: space-between;
-            position: relative;
-            z-index: 2;
         }
 
         .hero-content {
@@ -180,12 +158,6 @@
             border-radius: 1.5rem;
             box-shadow: 0 20px 30px -12px rgba(0,0,0,0.35);
             border: 2px solid rgba(255,255,240,0.3);
-            transition: transform 0.2s;
-            cursor: pointer;
-        }
-
-        .hero-image img:hover {
-            transform: scale(1.02);
         }
 
         .robot-status-card {
@@ -205,16 +177,14 @@
             font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            backdrop-filter: blur(4px);
         }
 
         .hero-content h1 {
             font-size: 3rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
             background: linear-gradient(135deg, #fff 0%, #d4f3ec 100%);
-            background-clip: text;
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
         }
 
@@ -229,7 +199,6 @@
             gap: 0.6rem;
             text-decoration: none;
             transition: 0.2s;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
             margin-top: 1rem;
             border: none;
             cursor: pointer;
@@ -238,7 +207,6 @@
         .btn-register:hover {
             background: #ffb347;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
         .call-for-participants {
@@ -252,7 +220,6 @@
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .call-btn {
@@ -262,17 +229,10 @@
             padding: 0.6rem 1.4rem;
             border-radius: 40px;
             font-weight: 600;
-            font-size: 0.85rem;
             cursor: pointer;
-            transition: 0.2s;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-        }
-
-        .call-btn:hover {
-            background: #1b5e4f;
-            transform: scale(1.02);
         }
 
         .card-grid {
@@ -370,7 +330,6 @@
             flex: 1;
             min-width: 200px;
             border: 1px solid #cde3dd;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
 
         .organizing-committee {
@@ -408,7 +367,6 @@
             overflow: hidden;
             border: 1px solid #d2e6e0;
             margin: 1.5rem 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
         }
         
         .sponsors-box {
@@ -432,10 +390,6 @@
             color: #1e6b5a;
         }
         
-        .section-subtitle i {
-            font-size: 1.6rem;
-        }
-        
         .logos-grid {
             display: flex;
             flex-wrap: wrap;
@@ -452,8 +406,6 @@
             background: #ffffff;
             padding: 0.5rem 1rem;
             border-radius: 1rem;
-            transition: all 0.2s;
-            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.05));
         }
         
         .logo-item img {
@@ -461,22 +413,6 @@
             max-width: 130px;
             width: auto;
             object-fit: contain;
-            transition: transform 0.2s;
-        }
-        
-        .logo-item img:hover {
-            transform: scale(1.05);
-        }
-        
-        .sponsor-badge {
-            background: #f5a62320;
-            border-radius: 30px;
-            padding: 0.25rem 0.8rem;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: #c46f0a;
-            display: inline-block;
-            margin-top: 0.3rem;
         }
 
         .feature-illustration {
@@ -494,12 +430,6 @@
             padding: 1.5rem;
             text-align: center;
             border: 1px solid #dde9e5;
-            transition: 0.2s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
         
         .feature-card h4 {
@@ -516,12 +446,10 @@
             border-radius: 2rem 2rem 0 0;
             text-align: center;
         }
+
         .footer a {
             color: #ffda99;
             text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
         }
 
         .pdf-modal {
@@ -536,6 +464,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .pdf-modal-content {
             background: transparent;
             width: 90%;
@@ -543,6 +472,7 @@
             height: 90%;
             position: relative;
         }
+
         .pdf-modal-header {
             background: rgba(27, 94, 79, 0.95);
             color: white;
@@ -551,21 +481,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            backdrop-filter: blur(8px);
         }
+
         .close-modal {
             background: none;
             border: none;
             color: white;
             font-size: 1.8rem;
             cursor: pointer;
-            line-height: 1;
-            transition: 0.2s;
         }
-        .close-modal:hover {
-            transform: scale(1.1);
-            color: #f5a623;
-        }
+
         .pdf-iframe {
             width: 100%;
             height: calc(100% - 52px);
@@ -575,8 +500,7 @@
         }
 
         @media (max-width: 850px) {
-            .nav-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
-            .raise-2025-btn, .raise-2026-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
+            .nav-btn, .btn-raise-2025, .btn-raise-2026 { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
             .hero-content h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.7rem; }
             .hero-grid { flex-direction: column; text-align: center; }
@@ -586,7 +510,7 @@
 </head>
 <body>
 
-<!-- BUTTONS NAVIGATION BAR -->
+<!-- BARRE DE NAVIGATION -->
 <div class="nav-buttons-bar">
     <div class="nav-container">
         <button class="nav-btn" data-section="hero-top"><i class="fas fa-home"></i> Home</button>
@@ -598,20 +522,17 @@
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
-        <!-- ============================================= -->
-        <!-- BOUTONS RAISE 2025 ET RAISE 2026 - DIRECTEMENT VISIBLES -->
-        <!-- ============================================= -->
-        <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank" class="raise-2025-btn">
+        <!-- BOUTONS RAISE 2025 ET 2026 -->
+        <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank" class="btn-raise-2025">
             <i class="fas fa-calendar-alt"></i> RAISE 2025
         </a>
-        <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank" class="raise-2026-btn">
+        <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank" class="btn-raise-2026">
             <i class="fas fa-calendar-alt"></i> RAISE 2026
         </a>
-        <!-- ============================================= -->
     </div>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <div id="hero-top" class="hero-split" style="scroll-margin-top: 70px;">
     <div class="container">
         <div class="hero-grid">
@@ -619,13 +540,13 @@
                 <div class="hero-badge"><i class="fas fa-robot"></i> RESDA Workshop | 14–16 July 2026, Tunisia</div>
                 <h1>RAISE 2026</h1>
                 <div style="font-size:1.2rem; font-weight: 500; margin: 0.5rem 0;">2nd Workshop on Robotics & Artificial Intelligence in Systems Engineering</div>
-                <p style="font-size:1.05rem; margin-top: 0.8rem;"><strong>Theme:</strong> Agentic Robotics & VLA Models for Smart Agriculture — From LLM-driven greenhouse inspection to end-to-end robotic manipulation.</p>
+                <p style="font-size:1.05rem; margin-top: 0.8rem;"><strong>Theme:</strong> Agentic Robotics & VLA Models for Smart Agriculture</p>
                 <button class="btn-register" id="heroRegisterBtn"><i class="fas fa-arrow-right"></i> REGISTER NOW →</button>
             </div>
             <div class="hero-image">
                 <img src="raise26.png" alt="RAISE 2026 Logo" onerror="this.src='https://placehold.co/300x200?text=RAISE+2026'">
                 <div class="robot-status-card">
-                    <img src="robot.png" alt="Robot Vision System Status" style="width:100%; border-radius:0.8rem;" onerror="this.src='https://placehold.co/280x160?text=Robot+Status'">
+                    <img src="robot.png" alt="Robot Status" style="width:100%; border-radius:0.8rem;" onerror="this.src='https://placehold.co/280x160?text=Robot+Status'">
                 </div>
             </div>
         </div>
@@ -643,12 +564,12 @@
             <h3><i class="fas fa-file-pdf"></i> RAISE 2026 – Call for Participants</h3>
             <button class="close-modal" id="closePdfModalBtn">&times;</button>
         </div>
-        <iframe id="pdfIframe" class="pdf-iframe" src="" title="RAISE 2026 Call for Participants PDF"></iframe>
+        <iframe id="pdfIframe" class="pdf-iframe" src="" title="PDF"></iframe>
     </div>
 </div>
 
 <div class="container">
-    
+    <!-- FEATURES -->
     <div class="feature-illustration">
         <div class="feature-card">
             <i class="fas fa-microchip" style="font-size:2.5rem; color:#2a7f6e;"></i>
@@ -667,170 +588,136 @@
         </div>
     </div>
 
-    <!-- SECTION 1: ABOUT -->
+    <!-- ABOUT -->
     <div id="about" class="section">
         <div class="section-title"><i class="fas fa-leaf"></i> About RAISE 2026</div>
         <div class="card-grid">
             <div class="card">
                 <div class="card-icon"><i class="fas fa-microchip"></i></div>
                 <h3>Vision & Goal</h3>
-                <p>Hands‑on workshop merging Agentic Robotics (LLM-driven) and VLA models for sustainable agriculture. The robot autonomously inspects greenhouses, generates field reports, and acts via natural language.</p>
+                <p>Hands‑on workshop merging Agentic Robotics and VLA models for sustainable agriculture.</p>
             </div>
             <div class="card">
                 <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
                 <h3>Dates & Venue</h3>
-                <p>14–16 July 2026 · ISGIS, Tunisia.<br>Organized by <strong>RESDA</strong> (Renewable Energy & Sustainable Development Association).</p>
+                <p>14–16 July 2026 · ISGIS, Tunisia.<br>Organized by <strong>RESDA</strong>.</p>
             </div>
             <div class="card">
                 <div class="card-icon"><i class="fas fa-trophy"></i></div>
                 <h3>Final Hackathon</h3>
-                <p>Day 3: Competition — Combine planner (LLM) + executor (VLA) into one end-to-end agentic system. Prizes & recognition.</p>
+                <p>Day 3: Competition — Combine planner (LLM) + executor (VLA). Prizes & recognition.</p>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 2: PROGRAM -->
+    <!-- PROGRAM -->
     <div id="program" class="section">
         <div class="section-title"><i class="fas fa-clock"></i> Workshop Program Highlights</div>
         <div class="schedule-wrapper">
             <div class="day-block">
-                <div class="day-title"><i class="fas fa-brain"></i> DAY 1 – July 14, 2026 · Agentic Robotics: Making the Robot Think</div>
+                <div class="day-title"><i class="fas fa-brain"></i> DAY 1 – July 14, 2026 · Agentic Robotics</div>
                 <table>
                     <thead><tr><th>Time</th><th>Activity</th></tr></thead>
                     <tbody>
                         <tr><td class="time-col">8:00 – 8:30</td><td>Registration</td></tr>
                         <tr><td class="time-col">8:30 – 9:00</td><td>Opening Ceremony</td></tr>
-                        <tr><td class="time-col">9:00 – 9:45</td><td><strong>Novel AI method for robots path planning : The DM-SPP</strong> – Prof. Souhail Dhouib (ISGIS)</td></tr>
-                        <tr><td class="time-col">9:45 – 10:30</td><td><strong>HMI and cognitive robotics: toward intelligent and collaborative systems</strong> – Prof. Adel Alimi (ENIS)</td></tr>
-                        <tr><td class="time-col">10:30 – 11:00</td><td>Coffee break + Group photo</td></tr>
-                        <tr><td class="time-col">11:00 – 12:30</td><td><strong>Lecture 1</strong> – Prof. Anis Koubaa (Alfaisal University / ScaleX Innovation) – LLM-driven navigation</td></tr>
-                        <tr><td class="time-col">12:30 – 14:00</td><td>Lunch</td></tr>
-                        <tr><td class="time-col">14:00 – 18:00</td><td><strong>Hands‑on Lab</strong> – LLM-driven robot inspects greenhouse & generates structured field report</td></tr>
+                        <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 1</strong> – Prof. Anis Koubaa – LLM-driven navigation</td></tr>
+                        <tr><td class="time-col">14:00 – 18:00</td><td><strong>Hands‑on Lab</strong> – LLM-driven robot inspects greenhouse</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="day-block">
-                <div class="day-title"><i class="fas fa-hand-peace"></i> DAY 2 – July 15, 2026 · Vision-Language-Action: Making the Robot Act</div>
+                <div class="day-title"><i class="fas fa-hand-peace"></i> DAY 2 – July 15, 2026 · Vision-Language-Action</div>
                 <table>
                     <thead><tr><th>Time</th><th>Activity</th></tr></thead>
                     <tbody>
-                        <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 2.1</strong> – Prof. Anis Koubaa : VLA architectures for robotic manipulation</td></tr>
-                        <tr><td class="time-col">10:30 – 11:00</td><td>Coffee break</td></tr>
-                        <tr><td class="time-col">11:00 – 12:30</td><td><strong>Lecture 2.2</strong> – Prof. Anis Koubaa : hosted VLA endpoints & natural-language execution</td></tr>
-                        <tr><td class="time-col">12:30 – 14:00</td><td>Lunch</td></tr>
-                        <tr><td class="time-col">14:00 – 18:00</td><td><strong>Hands‑on Lab</strong> – Robot executes manipulation instructions via VLA model</td></tr>
+                        <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 2.1</strong> – VLA architectures for robotic manipulation</td></tr>
+                        <tr><td class="time-col">14:00 – 18:00</td><td><strong>Hands‑on Lab</strong> – Robot executes manipulation instructions</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="day-block">
-                <div class="day-title"><i class="fas fa-rocket"></i> DAY 3 – July 16, 2026 · Integration & Hackathon COMPETITION</div>
+                <div class="day-title"><i class="fas fa-rocket"></i> DAY 3 – July 16, 2026 · Hackathon COMPETITION</div>
                 <table>
                     <thead><tr><th>Time</th><th>Activity</th></tr></thead>
                     <tbody>
-                        <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 3.1</strong> – Prof. Anis Koubaa : end-to-end agentic system design</td></tr>
-                        <tr><td class="time-col">10:30 – 11:00</td><td>Coffee break</td></tr>
-                        <tr><td class="time-col">11:00 – 12:30</td><td><strong>Lecture 3.2</strong> – Prof. Anis Koubaa : integration of planner + VLA executor</td></tr>
-                        <tr><td class="time-col">12:30 – 14:00</td><td>Lunch</td></tr>
-                        <tr><td class="highlight-bg">14:00 – 17:00</td><td class="highlight-bg"><strong>🚀 HACKATHON COMPETITION</strong> – Build a complete agentic robot system: inspect & act!</td></tr>
-                        <tr><td class="time-col">17:00 – 18:00</td><td><strong>Rewards & Closing</strong> – Prize ceremony & closing remarks</td></tr>
+                        <tr><td class="time-col">9:00 – 12:30</td><td><strong>Lectures</strong> – End-to-end agentic system design</td></tr>
+                        <tr><td class="highlight-bg">14:00 – 17:00</td><td class="highlight-bg"><strong>🚀 HACKATHON COMPETITION</strong></td></tr>
+                        <tr><td class="time-col">17:00 – 18:00</td><td><strong>Rewards & Closing</strong></td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <p style="margin-top: 1rem; font-style:italic; text-align:center;"><i class="fas fa-laptop-code"></i> Hands-on labs involve real coding, simulation, and VLA endpoints. Come ready to innovate!</p>
     </div>
 
-    <!-- SECTION 3: SPEAKERS -->
+    <!-- SPEAKERS -->
     <div id="speakers" class="section">
-        <div class="section-title"><i class="fas fa-microphone-alt"></i> Guest Speakers & Keynotes</div>
+        <div class="section-title"><i class="fas fa-microphone-alt"></i> Guest Speakers</div>
         <div class="card-grid">
-            <div class="card"><span style="background:#E0F2EE; padding:0.2rem 0.8rem; border-radius:20px; font-size:0.7rem; font-weight:600;">Main Lecturer</span><h3>Prof. Anis Koubaa</h3><p>Alfaisal University (KSA) / ScaleX Innovation – Leading expert in cloud robotics, VLA, and AI for autonomous systems.</p></div>
-            <div class="card"><span style="background:#E0F2EE; padding:0.2rem 0.8rem; border-radius:20px;">DM-SPP</span><h3>Prof. Souhail Dhouib</h3><p>ISGIS – Path planning optimization, robotics & intelligent search.</p></div>
-            <div class="card"><span style="background:#E0F2EE; padding:0.2rem 0.8rem; border-radius:20px;">AI Pioneer</span><h3>Prof. Adel Alimi</h3><p>ENIS – Advanced AI, intelligent systems & cognitive robotics.</p></div>
+            <div class="card"><h3>Prof. Anis Koubaa</h3><p>Alfaisal University / ScaleX Innovation – VLA, cloud robotics</p></div>
+            <div class="card"><h3>Prof. Souhail Dhouib</h3><p>ISGIS – Path planning optimization (DM-SPP)</p></div>
+            <div class="card"><h3>Prof. Adel Alimi</h3><p>ENIS – Cognitive robotics & intelligent systems</p></div>
         </div>
     </div>
 
-    <!-- SECTION 4: COMMITTEES -->
+    <!-- COMMITTEES -->
     <div id="committees" class="section">
-        <div class="section-title"><i class="fas fa-users-cog"></i> Committees & Organization</div>
+        <div class="section-title"><i class="fas fa-users-cog"></i> Committees</div>
         <div class="committees-flex">
-            <div class="committee-card">
-                <strong><i class="fas fa-medal"></i> Honorary Chairs</strong><br>
-                Prof. Hatem Bentaher (ISGIS / LASEM)<br>
-                Prof. Mohamed Abid (ENIS / CES)
-            </div>
-            <div class="committee-card">
-                <strong><i class="fas fa-chalkboard-user"></i> General Chairs</strong><br>
-                Houssam Chouikhi (ISSIG / LASEM)<br>
-                Omar Cheikhrouhou (ENETCOM / CES)
-            </div>
+            <div class="committee-card"><strong>Honorary Chairs</strong><br>Prof. Hatem Bentaher<br>Prof. Mohamed Abid</div>
+            <div class="committee-card"><strong>General Chairs</strong><br>Houssam Chouikhi<br>Omar Cheikhrouhou</div>
         </div>
         <div class="committee-card organizing-committee">
-            <strong><i class="fas fa-calendar-alt"></i> Organizing Committee</strong>
+            <strong>Organizing Committee</strong>
             <div class="organizing-grid">
-                <span>Prof. Mouna Baklouti (ENIS / CES)</span>
-                <span>Atidel Ghorbel (ENIS / LASEM)</span>
-                <span>Amira Echtioui (ENSTAB / ATMS)</span>
-                <span>Nidhal Ayadi (BSF / RESDA)</span>
-                <span>Olfa Gaddour (ENIS / CES)</span>
-                <span>Zeineb Boumallessa (ENIT / LASEM)</span>
-                <span>Manel Hentati (ENETCOM / CES)</span>
-                <span>Seif Hadrich (BlueBox Lab / RESDA)</span>
-                <span>Yassine Aydi (ISAMS / CES)</span>
-                <span>Rania Ben Amor (RESDA / LASEM)</span>
-                <span>Bassem Hadjkacem (FSTSB / CES)</span>
-                <span>Emna Kamoun (GEOMODELE / FSS)</span>
+                <span>Prof. Mouna Baklouti</span><span>Atidel Ghorbel</span><span>Amira Echtioui</span>
+                <span>Nidhal Ayadi</span><span>Olfa Gaddour</span><span>Zeineb Boumallessa</span>
+                <span>Manel Hentati</span><span>Seif Hadrich</span><span>Yassine Aydi</span>
+                <span>Rania Ben Amor</span><span>Bassem Hadjkacem</span><span>Emna Kamoun</span>
             </div>
         </div>
-        <p style="margin-top: 0.7rem;"><i class="fas fa-flask"></i> In collaboration with RESDA, LASEM, CES, ENETCOM, ISGIS, BlueBox Lab, ATMS.</p>
     </div>
 
-    <!-- SECTION 5: WHY ATTEND -->
+    <!-- WHY ATTEND -->
     <div id="why-attend" class="section">
-        <div class="section-title"><i class="fas fa-question-circle"></i> Why Attend RAISE 2026?</div>
+        <div class="section-title"><i class="fas fa-question-circle"></i> Why Attend?</div>
         <div class="card-grid">
-            <div class="card"><div class="card-icon"><i class="fas fa-handshake"></i></div><h3>Network</h3><p>Connect with international experts from Alfaisal University, ENIS, ISGIS, and industry partners.</p></div>
-            <div class="card"><div class="card-icon"><i class="fas fa-lightbulb"></i></div><h3>Innovate</h3><p>Explore state‑of‑the‑art VLA models and LLM‑driven agentic robotics for smart agriculture.</p></div>
-            <div class="card"><div class="card-icon"><i class="fas fa-globe-americas"></i></div><h3>Impact</h3><p>Advance sustainable agriculture with real‑world robotics & AI solutions.</p></div>
-            <div class="card"><div class="card-icon"><i class="fas fa-trophy"></i></div><h3>Compete</h3><p>Participate in the hackathon challenge and win recognition & prizes.</p></div>
-            <div class="card"><div class="card-icon"><i class="fas fa-users"></i></div><h3>Collaborate</h3><p>Build partnerships for future projects in systems engineering and agri‑robotics.</p></div>
+            <div class="card"><h3>Network</h3><p>Connect with international experts</p></div>
+            <div class="card"><h3>Innovate</h3><p>Explore VLA models & agentic robotics</p></div>
+            <div class="card"><h3>Compete</h3><p>Hackathon challenge with prizes</p></div>
         </div>
     </div>
 
-    <!-- SECTION 6: REGISTRATION -->
+    <!-- REGISTRATION -->
     <div id="register-section" class="section">
-        <div class="section-title"><i class="fas fa-id-card"></i> Register Now — Secure Your Spot</div>
+        <div class="section-title"><i class="fas fa-id-card"></i> Register Now</div>
         <div class="contact-block">
-            <div style="flex:2">
-                <h3 style="color: #175e4d; font-size: 1.6rem;"><i class="fas fa-file-signature"></i> Registration Form</h3>
-                <p>Early registration includes full access to all lectures, hands‑on labs, hackathon competition, and participation certificate. Limited seats available.</p>
-                <a href="https://forms.gle/ANibdzjuHg7HCpGu5" target="_blank" class="btn-register" style="background: #2a7f6e; color:white; box-shadow: none; margin-top: 0.5rem; display: inline-flex;"><i class="fas fa-external-link-alt"></i> Go to Registration Form →</a>
-                <p style="margin-top: 1rem;">🔗 Direct link: <a href="https://forms.gle/ANibdzjuHg7HCpGu5" target="_blank">https://forms.gle/ANibdzjuHg7HCpGu5</a></p>
-                <p><i class="fas fa-envelope"></i> Contact: <a href="mailto:raise.workshop.2026@gmail.com">raise.workshop.2026@gmail.com</a> &nbsp;|&nbsp; <i class="fas fa-map-marker-alt"></i> ISGIS, Tunisia</p>
+            <div>
+                <h3 style="color: #175e4d;"><i class="fas fa-file-signature"></i> Registration Form</h3>
+                <p>Early registration includes full access to lectures, labs, hackathon, and certificate.</p>
+                <a href="https://forms.gle/ANibdzjuHg7HCpGu5" target="_blank" class="btn-register" style="background:#2a7f6e; color:white;">Go to Registration Form →</a>
+                <p style="margin-top:1rem;">📧 raise.workshop.2026@gmail.com</p>
             </div>
         </div>
     </div>
 
-    <!-- SECTION 7: SPONSORS & PARTNERS -->
+    <!-- PARTNERS -->
     <div id="partners" class="section">
-        <div class="section-title"><i class="fas fa-handshake"></i> Sponsors & Partners</div>
+        <div class="section-title"><i class="fas fa-handshake"></i> Partners</div>
         <div class="sponsors-partners-section">
             <div class="sponsors-box">
-                <div class="section-subtitle"><i class="fas fa-gem" style="color: #f5a623;"></i> Golden Sponsors <span class="sponsor-badge"><i class="fas fa-star"></i> Official Supporters</span></div>
+                <div class="section-subtitle"><i class="fas fa-gem"></i> Golden Sponsors</div>
                 <div class="logos-grid">
-                    <div class="logo-item"><img src="agrirobot.png" alt="Agrirobot" onerror="this.src='https://placehold.co/130x65?text=AGRIROBOT'"><br><small style="display:block; font-size:0.7rem;">AgriRobot</small></div>
-                    <div class="logo-item"><img src="ichrak.png" alt="Ichrak" onerror="this.src='https://placehold.co/130x65?text=Basil Shine Farm'"><br><small style="display:block; font-size:0.7rem;">Basil Shine Farm</small></div>
+                    <div class="logo-item"><img src="agrirobot.png" onerror="this.src='https://placehold.co/130x65?text=AgriRobot'"></div>
+                    <div class="logo-item"><img src="ichrak.png" onerror="this.src='https://placehold.co/130x65?text=Basil+Shine+Farm'"></div>
                 </div>
             </div>
             <div class="partners-box">
-                <div class="section-subtitle"><i class="fas fa-building" style="color: #2a7f6e;"></i> Academic & Institutional Partners</div>
+                <div class="section-subtitle"><i class="fas fa-building"></i> Academic Partners</div>
                 <div class="logos-grid">
-                    <div class="logo-item"><img src="us.png" alt="University of Sousse" onerror="this.src='https://placehold.co/120x60?text=US'"></div>
-                    <div class="logo-item"><img src="isgi.png" alt="ISGI" onerror="this.src='https://placehold.co/120x60?text=ISGI'"></div>
-                    <div class="logo-item"><img src="lazem.png" alt="LAZEM" onerror="this.src='https://placehold.co/120x60?text=LASEM'"></div>
-                    <div class="logo-item"><img src="resda.png" alt="RESDA" onerror="this.src='https://placehold.co/120x60?text=RESDA'"></div>
-                    <div class="logo-item"><img src="ces.webp" alt="CES" onerror="this.src='https://placehold.co/120x60?text=CES'"></div>
-                    <div class="logo-item"><img src="scaleX.png" alt="ScaleX" onerror="this.src='https://placehold.co/120x60?text=ScaleX'"></div>
+                    <div class="logo-item"><img src="us.png" onerror="this.src='https://placehold.co/120x60?text=US'"></div>
+                    <div class="logo-item"><img src="resda.png" onerror="this.src='https://placehold.co/120x60?text=RESDA'"></div>
+                    <div class="logo-item"><img src="ces.webp" onerror="this.src='https://placehold.co/120x60?text=CES'"></div>
                 </div>
             </div>
         </div>
@@ -840,10 +727,9 @@
 <!-- FOOTER -->
 <div class="footer">
     <div class="container">
-        <p style="font-weight: 800; font-size: 1.2rem;">RAISE 2026 – Robotics & AI in Systems Engineering</p>
-        <p><i class="fas fa-calendar-alt"></i> 14–16 July 2026 · ISGIS, Tunisia | <i class="fas fa-envelope"></i> raise.workshop.2026@gmail.com</p>
-        <p><i class="fas fa-globe"></i> <a href="http://www.resda.tn/raise2026" target="_blank">http://www.resda.tn/raise2026</a> · #RAISE2026 #AgenticRobotics #SmartAgriculture</p>
-        <p style="margin-top: 1rem; font-size:0.8rem;">© 2026 RESDA – All rights reserved. International workshop on robotics & AI for intelligent systems.</p>
+        <p><strong>RAISE 2026 – Robotics & AI in Systems Engineering</strong></p>
+        <p>14–16 July 2026 · ISGIS, Tunisia | raise.workshop.2026@gmail.com</p>
+        <p>#RAISE2026 #AgenticRobotics #SmartAgriculture</p>
     </div>
 </div>
 
@@ -862,6 +748,7 @@
             modal.style.display = 'none';
             pdfIframe.src = '';
         }
+        
         const callButton = document.getElementById('callPdfBtn');
         if(callButton) callButton.addEventListener('click', (e) => { e.preventDefault(); openPdfModal(); });
         if(closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -869,7 +756,7 @@
         
         function scrollToSection(sectionId) {
             const target = document.getElementById(sectionId);
-            if (target) {
+            if(target) {
                 const offset = 90;
                 const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
                 window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
@@ -879,21 +766,13 @@
         document.querySelectorAll('.nav-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const sectionName = btn.getAttribute('data-section');
-                if (sectionName === 'hero-top') {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    scrollToSection(sectionName);
-                }
+                if(sectionName === 'hero-top') window.scrollTo({ top: 0, behavior: 'smooth' });
+                else scrollToSection(sectionName);
             });
         });
         
         const heroReg = document.getElementById('heroRegisterBtn');
-        if(heroReg) {
-            heroReg.addEventListener('click', (e) => {
-                e.preventDefault();
-                scrollToSection('register-section');
-            });
-        }
+        if(heroReg) heroReg.addEventListener('click', () => scrollToSection('register-section'));
     })();
 </script>
 </body>
