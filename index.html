@@ -506,6 +506,46 @@
             .hero-grid { flex-direction: column; text-align: center; }
             .call-for-participants { flex-direction: column; text-align: center; }
         }
+        /* MENU DÉROULANT (DROPDOWN) */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(10, 48, 41, 0.98);
+            backdrop-filter: blur(12px);
+            min-width: 140px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 101;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 5px;
+            border: 1px solid #2a7f6e;
+        }
+
+        .dropdown-content a {
+            color: #e0f2ee;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2a7f6e;
+            color: white;
+            padding-left: 20px; /* Petit effet d'animation au survol */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -522,13 +562,14 @@
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
-        <!-- BOUTONS RAISE 2025 ET 2026 -->
-        <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank" class="btn-raise-2025">
-            <i class="fas fa-calendar-alt"></i> RAISE 2025
-        </a>
-        <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank" class="btn-raise-2026">
-            <i class="fas fa-calendar-alt"></i> RAISE 2026
-        </a>
+        <div class="dropdown">
+            <button class="nav-btn"><i class="fas fa-link"></i> Éditions <i class="fas fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank"><i class="fas fa-external-link-alt"></i> RAISE 2025</a>
+                <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank"><i class="fas fa-external-link-alt"></i> RAISE 2026</a>
+            </div>
+        </div>
+
     </div>
 </div>
 
