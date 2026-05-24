@@ -64,17 +64,12 @@
             transform: translateY(-2px);
         }
 
-        /* DROPDOWN MENU STYLES */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-btn {
-            background: transparent;
-            border: 1.5px solid #50b2a0;
-            color: #e0f2ee;
-            font-weight: 600;
+        /* Boutons RAISE spécifiques */
+        .raise-btn {
+            background: #f5a623;
+            border: none;
+            color: #1d3e35;
+            font-weight: 800;
             font-size: 0.85rem;
             padding: 0.5rem 1.1rem;
             border-radius: 40px;
@@ -82,51 +77,36 @@
             transition: all 0.2s ease;
             font-family: 'Inter', sans-serif;
             letter-spacing: 0.3px;
-            display: flex;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .dropdown-btn:hover {
-            background: #2a7f6e;
-            border-color: #c0e8e0;
-            color: white;
+        .raise-btn:hover {
+            background: #ffb347;
             transform: translateY(-2px);
+            color: #1d3e35;
         }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #0a3029;
-            min-width: 170px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            margin-top: 0.5rem;
-            overflow: hidden;
-            border: 1px solid #2a7f6e;
-        }
-
-        .dropdown-content a {
-            color: #e0f2ee;
-            padding: 0.75rem 1rem;
-            text-decoration: none;
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
+        .raise-btn-2025 {
             background: #2a7f6e;
             color: white;
         }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
+        .raise-btn-2025:hover {
+            background: #1e6b5a;
+            color: white;
+        }
+
+        .raise-btn-2026 {
+            background: #f5a623;
+            color: #1d3e35;
+        }
+
+        .raise-btn-2026:hover {
+            background: #ffb347;
+            color: #1d3e35;
         }
 
         .container {
@@ -205,7 +185,6 @@
             transform: scale(1.02);
         }
 
-        /* Robot status card style */
         .robot-status-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -293,7 +272,6 @@
             transform: scale(1.02);
         }
 
-        /* CARDS */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -326,7 +304,6 @@
             color: #1e6b5a;
         }
 
-        /* SCHEDULE IMPROVED */
         .schedule-wrapper {
             background: white;
             border-radius: 1.5rem;
@@ -376,7 +353,6 @@
             background: #fff7e8;
         }
 
-        /* COMMITTEES */
         .committees-flex {
             display: flex;
             flex-wrap: wrap;
@@ -423,7 +399,6 @@
             gap: 1.5rem;
         }
 
-        /* PARTNERS & SPONSORS LOGOS SECTION */
         .sponsors-partners-section {
             background: white;
             border-radius: 1.5rem;
@@ -501,13 +476,6 @@
             margin-top: 0.3rem;
         }
 
-        @media (max-width: 700px) {
-            .logos-grid { gap: 1rem; }
-            .logo-item img { max-height: 45px; max-width: 80px; }
-            .section-subtitle { font-size: 1.1rem; }
-        }
-
-        /* Feature row for robot illustration */
         .feature-illustration {
             display: flex;
             flex-wrap: wrap;
@@ -529,12 +497,6 @@
         .feature-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.08);
-        }
-        
-        .feature-card img {
-            max-width: 100%;
-            border-radius: 1rem;
-            margin-bottom: 1rem;
         }
         
         .feature-card h4 {
@@ -559,7 +521,6 @@
             text-decoration: underline;
         }
 
-        /* PDF MODAL */
         .pdf-modal {
             display: none;
             position: fixed;
@@ -612,17 +573,11 @@
 
         @media (max-width: 850px) {
             .nav-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
-            .dropdown-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
+            .raise-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
             .hero-content h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.7rem; }
             .hero-grid { flex-direction: column; text-align: center; }
             .call-for-participants { flex-direction: column; text-align: center; }
-        }
-        
-        @media (max-width: 1050px) {
-            .nav-container {
-                gap: 0.5rem;
-            }
         }
     </style>
 </head>
@@ -640,18 +595,17 @@
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
-        <!-- RAISE EDITIONS DROPDOWN BUTTON -->
-        <div class="dropdown">
-            <button class="dropdown-btn"><i class="fas fa-calendar-alt"></i> RAISE Editions ▼</button>
-            <div class="dropdown-content">
-                <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank"><i class="fas fa-arrow-right"></i> RAISE 2025</a>
-                <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank"><i class="fas fa-arrow-right"></i> RAISE 2026</a>
-            </div>
-        </div>
+        <!-- BOUTONS RAISE 2025 ET RAISE 2026 - DIRECTEMENT VISIBLES -->
+        <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank" class="raise-btn raise-btn-2025">
+            <i class="fas fa-calendar-alt"></i> RAISE 2025
+        </a>
+        <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank" class="raise-btn raise-btn-2026">
+            <i class="fas fa-calendar-alt"></i> RAISE 2026
+        </a>
     </div>
 </div>
 
-<!-- HERO SECTION with both images -->
+<!-- HERO SECTION -->
 <div id="hero-top" class="hero-split" style="scroll-margin-top: 70px;">
     <div class="container">
         <div class="hero-grid">
@@ -765,7 +719,7 @@
             </div>
             <div class="day-block">
                 <div class="day-title"><i class="fas fa-rocket"></i> DAY 3 – July 16, 2026 · Integration & Hackathon COMPETITION</div>
-                <table>
+                </table>
                     <thead><tr><th>Time</th><th>Activity</th></tr></thead>
                     <tbody>
                         <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 3.1</strong> – Prof. Anis Koubaa : end-to-end agentic system design</td></tr>
