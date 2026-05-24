@@ -64,17 +64,17 @@
             transform: translateY(-2px);
         }
 
-        /* DROPDOWN MENU STYLES - CORRIGÉS */
+        /* DROPDOWN MENU STYLES - MÊME COULEUR QUE LES AUTRES BOUTONS */
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
         .dropdown-btn {
-            background: #f5a623;
-            border: none;
-            color: #1d3e35;
-            font-weight: 800;
+            background: transparent;
+            border: 1.5px solid #50b2a0;
+            color: #e0f2ee;
+            font-weight: 600;
             font-size: 0.85rem;
             padding: 0.5rem 1.1rem;
             border-radius: 40px;
@@ -88,7 +88,9 @@
         }
 
         .dropdown-btn:hover {
-            background: #ffb347;
+            background: #2a7f6e;
+            border-color: #c0e8e0;
+            color: white;
             transform: translateY(-2px);
         }
 
@@ -636,7 +638,7 @@
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
-        <!-- DROPDOWN MENU FOR RAISE EDITIONS - CORRIGÉ -->
+        <!-- DROPDOWN MENU FOR RAISE EDITIONS - MÊME COULEUR QUE LES AUTRES BOUTONS -->
         <div class="dropdown">
             <button class="dropdown-btn"><i class="fas fa-calendar-alt"></i> RAISE Editions ▼</button>
             <div class="dropdown-content">
@@ -753,7 +755,7 @@
             <div class="day-block">
                 <div class="day-title"><i class="fas fa-hand-peace"></i> DAY 2 – July 15, 2026 · Vision-Language-Action: Making the Robot Act</div>
                 <table>
-                    <thead><tr><th>Time</th><th>Activity</th><tr></thead>
+                    <thead><tr><th>Time</th><th>Activity</th></tr></thead>
                     <tbody>
                         <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 2.1</strong> – Prof. Anis Koubaa : VLA architectures for robotic manipulation</td></tr>
                         <tr><td class="time-col">10:30 – 11:00</td><td>Coffee break</td></tr>
@@ -772,7 +774,7 @@
                         <tr><td class="time-col">10:30 – 11:00</td><td>Coffee break</td></tr>
                         <tr><td class="time-col">11:00 – 12:30</td><td><strong>Lecture 3.2</strong> – Prof. Anis Koubaa : integration of planner + VLA executor</td></tr>
                         <tr><td class="time-col">12:30 – 14:00</td><td>Lunch</td></tr>
-                        <tr><td class="highlight-bg">14:00 – 17:00</td><td class="highlight-bg"><strong>🚀 HACKATHON COMPETITION</strong> – Build a complete agentic robot system: inspect & act!</td></tr>
+                        <tr class="highlight-bg"><td class="time-col">14:00 – 17:00</td><td><strong>🚀 HACKATHON COMPETITION</strong> – Build a complete agentic robot system: inspect & act!</td></tr>
                         <tr><td class="time-col">17:00 – 18:00</td><td><strong>Rewards & Closing</strong> – Prize ceremony & closing remarks</td></tr>
                     </tbody>
                 </table>
@@ -781,7 +783,7 @@
         <p style="margin-top: 1rem; font-style:italic; text-align:center;"><i class="fas fa-laptop-code"></i> Hands-on labs involve real coding, simulation, and VLA endpoints. Come ready to innovate!</p>
     </div>
 
- <!-- SECTION 3: SPEAKERS -->
+    <!-- SECTION 3: SPEAKERS -->
     <div id="speakers" class="section">
         <div class="section-title"><i class="fas fa-microphone-alt"></i> Guest Speakers & Keynotes</div>
         <div class="card-grid">
