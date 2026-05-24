@@ -64,6 +64,82 @@
             transform: translateY(-2px);
         }
 
+        /* DROPDOWN MENU STYLES */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-btn {
+            background: transparent;
+            border: 1.5px solid #50b2a0;
+            color: #e0f2ee;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dropdown-btn:hover {
+            background: #2a7f6e;
+            border-color: #c0e8e0;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #0a3029;
+            min-width: 160px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 0.5rem;
+            overflow: hidden;
+            border: 1px solid #2a7f6e;
+        }
+
+        .dropdown-content a {
+            color: #e0f2ee;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background: #2a7f6e;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Right-aligned dropdown for editions */
+        .dropdown-right {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-right .dropdown-content {
+            left: auto;
+            right: 0;
+        }
+
         .container {
             max-width: 1280px;
             margin: 0 auto;
@@ -547,6 +623,7 @@
 
         @media (max-width: 750px) {
             .nav-btn { padding: 0.4rem 0.9rem; font-size: 0.7rem; }
+            .dropdown-btn { padding: 0.4rem 0.9rem; font-size: 0.7rem; }
             .hero-content h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.7rem; }
             .hero-grid { flex-direction: column; text-align: center; }
@@ -567,6 +644,15 @@
         <button class="nav-btn" data-section="why-attend"><i class="fas fa-star"></i> Why Attend</button>
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
+        
+        <!-- NEW DROPDOWN MENU FOR RAISE EDITIONS -->
+        <div class="dropdown">
+            <button class="dropdown-btn"><i class="fas fa-code-branch"></i> RAISE Editions ▼</button>
+            <div class="dropdown-content">
+                <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank"><i class="fas fa-calendar-alt"></i> RAISE 2025</a>
+                <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank"><i class="fas fa-calendar-alt"></i> RAISE 2026</a>
+            </div>
+        </div>
     </div>
 </div>
 
