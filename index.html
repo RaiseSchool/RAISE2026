@@ -125,7 +125,50 @@
             padding-left: 1.2rem;
             color: #145c4b;
         }
+/* MENU DÉROULANT (DROPDOWN) */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
 
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(10, 48, 41, 0.98);
+            backdrop-filter: blur(12px);
+            min-width: 150px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            z-index: 999;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 5px;
+            border: 1px solid #2a7f6e;
+            right: 0; /* Aligne le menu à droite pour ne pas déborder de l'écran */
+        }
+
+        .dropdown-content a {
+            color: #e0f2ee;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2a7f6e;
+            color: white;
+            padding-left: 20px;
+        }
+
+        /* Affiche le menu au survol de la souris ou lors d'un clic (sur mobile) */
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
         .hero-split {
             background: linear-gradient(135deg, #0a3029 0%, #1b5e4f 100%);
             color: white;
@@ -563,13 +606,12 @@
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
         <div class="dropdown">
-            <button class="nav-btn"><i class="fas fa-link"></i> Éditions <i class="fas fa-caret-down"></i></button>
+            <button class="nav-btn" type="button"><i class="fas fa-link"></i> Éditions <i class="fas fa-caret-down"></i></button>
             <div class="dropdown-content">
                 <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank"><i class="fas fa-external-link-alt"></i> RAISE 2025</a>
                 <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank"><i class="fas fa-external-link-alt"></i> RAISE 2026</a>
             </div>
         </div>
-
     </div>
 </div>
 
