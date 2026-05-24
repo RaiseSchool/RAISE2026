@@ -64,17 +64,17 @@
             transform: translateY(-2px);
         }
 
-        /* DROPDOWN MENU STYLES */
+        /* DROPDOWN MENU STYLES - CORRIGÉS */
         .dropdown {
             position: relative;
             display: inline-block;
         }
 
         .dropdown-btn {
-            background: transparent;
-            border: 1.5px solid #50b2a0;
-            color: #e0f2ee;
-            font-weight: 600;
+            background: #f5a623;
+            border: none;
+            color: #1d3e35;
+            font-weight: 800;
             font-size: 0.85rem;
             padding: 0.5rem 1.1rem;
             border-radius: 40px;
@@ -88,9 +88,7 @@
         }
 
         .dropdown-btn:hover {
-            background: #2a7f6e;
-            border-color: #c0e8e0;
-            color: white;
+            background: #ffb347;
             transform: translateY(-2px);
         }
 
@@ -100,10 +98,10 @@
             top: 100%;
             left: 0;
             background: #0a3029;
-            min-width: 160px;
+            min-width: 180px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
+            z-index: 1000;
             margin-top: 0.5rem;
             overflow: hidden;
             border: 1px solid #2a7f6e;
@@ -113,11 +111,14 @@
             color: #e0f2ee;
             padding: 0.75rem 1rem;
             text-decoration: none;
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             font-size: 0.85rem;
             font-weight: 500;
             transition: all 0.2s;
             text-align: left;
+            cursor: pointer;
         }
 
         .dropdown-content a:hover {
@@ -125,19 +126,9 @@
             color: white;
         }
 
+        /* Important : le dropdown s'ouvre au survol */
         .dropdown:hover .dropdown-content {
             display: block;
-        }
-
-        /* Right-aligned dropdown for editions */
-        .dropdown-right {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-right .dropdown-content {
-            left: auto;
-            right: 0;
         }
 
         .container {
@@ -645,12 +636,16 @@
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
-        <!-- NEW DROPDOWN MENU FOR RAISE EDITIONS -->
+        <!-- DROPDOWN MENU FOR RAISE EDITIONS - CORRIGÉ -->
         <div class="dropdown">
-            <button class="dropdown-btn"><i class="fas fa-code-branch"></i> RAISE Editions ▼</button>
+            <button class="dropdown-btn"><i class="fas fa-calendar-alt"></i> RAISE Editions ▼</button>
             <div class="dropdown-content">
-                <a href="https://raiseschool.github.io/RAISE2025/" target="_blank"><i class="fas fa-calendar-alt"></i> RAISE 2025</a>
-                <a href="https://raiseschool.github.io/RAISE2026/" target="_blank"><i class="fas fa-calendar-alt"></i> RAISE 2026</a>
+                <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank">
+                    <i class="fas fa-arrow-right"></i> RAISE 2025
+                </a>
+                <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank">
+                    <i class="fas fa-arrow-right"></i> RAISE 2026
+                </a>
             </div>
         </div>
     </div>
@@ -758,7 +753,7 @@
             <div class="day-block">
                 <div class="day-title"><i class="fas fa-hand-peace"></i> DAY 2 – July 15, 2026 · Vision-Language-Action: Making the Robot Act</div>
                 <table>
-                    <thead><tr><th>Time</th><th>Activity</th></tr></thead>
+                    <thead><tr><th>Time</th><th>Activity</th><tr></thead>
                     <tbody>
                         <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 2.1</strong> – Prof. Anis Koubaa : VLA architectures for robotic manipulation</td></tr>
                         <tr><td class="time-col">10:30 – 11:00</td><td>Coffee break</td></tr>
