@@ -64,10 +64,34 @@
             transform: translateY(-2px);
         }
 
-        /* Boutons RAISE spécifiques */
-        .raise-btn {
+        /* BOUTONS RAISE 2025 ET 2026 - STYLES SPÉCIFIQUES TRÈS VISIBLES */
+        .raise-2025-btn {
+            background: #2a7f6e;
+            border: 2px solid #ffd700;
+            color: white;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 0.5rem 1.1rem;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .raise-2025-btn:hover {
+            background: #1e6b5a;
+            transform: translateY(-2px);
+            border-color: #fff;
+        }
+
+        .raise-2026-btn {
             background: #f5a623;
-            border: none;
+            border: 2px solid #ffd700;
             color: #1d3e35;
             font-weight: 800;
             font-size: 0.85rem;
@@ -83,30 +107,10 @@
             gap: 0.5rem;
         }
 
-        .raise-btn:hover {
+        .raise-2026-btn:hover {
             background: #ffb347;
             transform: translateY(-2px);
-            color: #1d3e35;
-        }
-
-        .raise-btn-2025 {
-            background: #2a7f6e;
-            color: white;
-        }
-
-        .raise-btn-2025:hover {
-            background: #1e6b5a;
-            color: white;
-        }
-
-        .raise-btn-2026 {
-            background: #f5a623;
-            color: #1d3e35;
-        }
-
-        .raise-btn-2026:hover {
-            background: #ffb347;
-            color: #1d3e35;
+            border-color: #fff;
         }
 
         .container {
@@ -129,7 +133,6 @@
             color: #145c4b;
         }
 
-        /* HERO IMPROVED */
         .hero-split {
             background: linear-gradient(135deg, #0a3029 0%, #1b5e4f 100%);
             color: white;
@@ -573,7 +576,7 @@
 
         @media (max-width: 850px) {
             .nav-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
-            .raise-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
+            .raise-2025-btn, .raise-2026-btn { padding: 0.4rem 0.8rem; font-size: 0.7rem; }
             .hero-content h1 { font-size: 2.2rem; }
             .section-title { font-size: 1.7rem; }
             .hero-grid { flex-direction: column; text-align: center; }
@@ -595,13 +598,16 @@
         <button class="nav-btn" data-section="register-section"><i class="fas fa-edit"></i> Register</button>
         <button class="nav-btn" data-section="partners"><i class="fas fa-handshake"></i> Partners</button>
         
+        <!-- ============================================= -->
         <!-- BOUTONS RAISE 2025 ET RAISE 2026 - DIRECTEMENT VISIBLES -->
-        <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank" class="raise-btn raise-btn-2025">
+        <!-- ============================================= -->
+        <a href="https://raiseschool2025.github.io/RAISE2025/" target="_blank" class="raise-2025-btn">
             <i class="fas fa-calendar-alt"></i> RAISE 2025
         </a>
-        <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank" class="raise-btn raise-btn-2026">
+        <a href="https://raiseschool2026.github.io/RAISE2026/" target="_blank" class="raise-2026-btn">
             <i class="fas fa-calendar-alt"></i> RAISE 2026
         </a>
+        <!-- ============================================= -->
     </div>
 </div>
 
@@ -643,7 +649,6 @@
 
 <div class="container">
     
-    <!-- Feature illustration row -->
     <div class="feature-illustration">
         <div class="feature-card">
             <i class="fas fa-microchip" style="font-size:2.5rem; color:#2a7f6e;"></i>
@@ -719,7 +724,7 @@
             </div>
             <div class="day-block">
                 <div class="day-title"><i class="fas fa-rocket"></i> DAY 3 – July 16, 2026 · Integration & Hackathon COMPETITION</div>
-                </table>
+                <table>
                     <thead><tr><th>Time</th><th>Activity</th></tr></thead>
                     <tbody>
                         <tr><td class="time-col">9:00 – 10:30</td><td><strong>Lecture 3.1</strong> – Prof. Anis Koubaa : end-to-end agentic system design</td></tr>
